@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+
+    <!--Page Title-->
+    <title>Project Details - Kenneth Rodrigues</title>
+
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="css/namari-color.css" />
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- Animate CSS-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+
+    <!--Google Webfonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      /* Project Details Page Styles */
+      .project-heading {
+        padding: 75px 0 20px;
+        text-align: center;
+        background: #f9f9f9;
+      }
+      .project-heading h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: #2c3e50;
+      }
+      .project-heading .subtitle {
+        font-size: 1.2em;
+        color: #7f8c8d;
+        font-style: italic;
+      }
+      .tags-section {
+        padding: 25px 0;
+        text-align: center;
+        background: #fff;
+      }
+      .tags-section .tag {
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 5px;
+        background: #34495e;
+        color: #fff;
+        border-radius: 20px;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .project-details {
+        padding: 5px 0;
+      }
+      .project-details .custom-row {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        gap: 40px;
+      }
+      .project-details .left-column {
+        flex: 1;
+      }
+      .project-details .right-column {
+        flex: 0 0 450px;
+      }
+      .project-details h3 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+      .project-details .description {
+        margin-bottom: 30px;
+        line-height: 1.8;
+        color: #34495e;
+      }
+      .project-details .description ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .project-details .description li {
+        padding: 10px 0;
+        padding-left: 25px;
+        position: relative;
+        border-bottom: 1px solid #ecf0f1;
+      }
+      .project-details .description li:before {
+        content: "▸ ";
+        color: #3498db;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      .project-details .description li:last-child {
+        border-bottom: none;
+      }
+      .project-details .technologies {
+        margin-bottom: 30px;
+      }
+      .project-details .technologies ul {
+        list-style: none;
+        padding: 0;
+      }
+      .project-details .technologies li {
+        padding: 8px 0;
+        border-bottom: 1px solid #ecf0f1;
+      }
+      .project-details .technologies li:before {
+        content: "▸ ";
+        color: #3498db;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .project-details .links {
+        margin-top: 30px;
+      }
+      .project-details .links a {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 12px 24px;
+        background: #3498db;
+        color: #fff;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+      .project-details .links a:hover {
+        background: #2980b9;
+      }
+      .project-details .links a i {
+        margin-right: 8px;
+      }
+      .project-gallery-column {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .project-gallery-column a {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+        transition: transform 0.3s;
+      }
+      .project-gallery-column a:hover {
+        transform: scale(1.02);
+      }
+      .project-gallery-column img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .project-details .custom-row {
+          flex-direction: column;
+        }
+        .project-details .right-column {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!--End of Preloader-->
+
+    <div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+      <div
+        class="top-border wow fadeInDown animated"
+        style="visibility: visible; animation-name: fadeInDown"
+      ></div>
+      <div
+        class="right-border wow fadeInRight animated"
+        style="visibility: visible; animation-name: fadeInRight"
+      ></div>
+      <div
+        class="bottom-border wow fadeInUp animated"
+        style="visibility: visible; animation-name: fadeInUp"
+      ></div>
+      <div
+        class="left-border wow fadeInLeft animated"
+        style="visibility: visible; animation-name: fadeInLeft"
+      ></div>
+    </div>
+
+    <div id="wrapper">
+      <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+          <div class="row clearfix">
+            <div class="col-1">
+              <!--Logo-->
+              <div id="logo">
+                <!--Logo that is shown on the banner-->
+                <img
+                  src="images/logo.png"
+                  id="banner-logo"
+                  alt="Landing Page"
+                />
+                <!--End of Banner Logo-->
+
+                <!--The Logo that is shown on the sticky Navigation Bar-->
+                <img
+                  src="images/logo-2.png"
+                  id="navigation-logo"
+                  alt="Landing Page"
+                />
+                <!--End of Navigation Logo-->
+              </div>
+              <!--End of Logo-->
+
+              <aside>
+                <!--Social Icons in Header-->
+                <ul class="social-icons">
+                  <li>
+                    <a
+                      target="_blank"
+                      title="linkedin"
+                      href="https://www.linkedin.com/in/kenneth-rodrigues"
+                    >
+                      <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      title="Github"
+                      href="http://www.Github.com/kennethnrk"
+                    >
+                      <i class="fa fa-github fa-1x"></i><span>Github</span>
+                    </a>
+                  </li>
+                </ul>
+              </aside>
+
+              <!--Main Navigation-->
+              <nav id="nav-main">
+                <ul>
+                  <li>
+                    <a href="index.html#about">
+                      <i class="fa fa-arrow-left" style="padding-right: 10px;"></i> Back to Projects
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html#banner">Home</a>
+                  </li>
+                  <li>
+                    <a href="index.html#about">Projects</a>
+                  </li>
+                  <li>
+                    <a href="index.html#interests">Interests</a>
+                  </li>
+                  <li>
+                    <a href="index.html#gallery">Gallery</a>
+                  </li>
+                </ul>
+              </nav>
+              <!--End of Main Navigation-->
+
+              <div id="nav-trigger"><span></span></div>
+              <nav id="nav-mobile"></nav>
+            </div>
+          </div>
+        </div>
+        <!--End of Header-->
+      </header>
+
+      <!--Main Content Area-->
+      <main id="content">
+        <!--Project Heading-->
+        <section class="project-heading scrollto">
+          <div class="clearfix">
+            <h1 id="project-title">Project Title</h1>
+            <p class="subtitle" id="project-subtitle">Project Subtitle</p>
+          </div>
+        </section>
+
+        <!--Tags Section-->
+        <section class="tags-section scrollto">
+          <div class="clearfix">
+            <div id="project-tags"></div>
+          </div>
+        </section>
+
+        <!--Project Details-->
+        <section class="project-details scrollto">
+          <div class="custom-row clearfix">
+            <div class="left-column">
+              <h3>Description</h3>
+              <div class="description" id="project-description"></div>
+
+              <h3>Technologies Used</h3>
+              <div class="technologies">
+                <ul id="project-technologies"></ul>
+              </div>
+
+              <div class="links" id="project-links"></div>
+            </div>
+            <div class="right-column">
+              <div
+                id="project-gallery"
+                class="project-gallery-column"
+                data-featherlight-gallery
+                data-featherlight-filter="a"
+              >
+                <!-- Gallery images will be dynamically inserted here -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--End Main Content Area-->
+
+      <!--Footer-->
+      <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix">
+          <!--Social Icons in Footer-->
+          <ul class="col-2 social-icons">
+            <li>
+              <a
+                target="_blank"
+                title="linkedin"
+                href="https://www.linkedin.com/in/kenneth-rodrigues"
+              >
+                <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                title="Github"
+                href="http://www.Github.com/kennethnrk"
+              >
+                <i class="fa fa-github fa-1x"></i><span>Github</span>
+              </a>
+            </li>
+          </ul>
+          <!--End of Social Icons in Footer-->
+        </div>
+      </footer>
+      <!--End of Footer-->
+    </div>
+
+    <!-- Include JavaScript resources -->
+    <script src="js/jquery.1.8.3.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/featherlight.min.js"></script>
+    <script src="js/featherlight.gallery.min.js"></script>
+    <script src="js/jquery.enllax.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.stickyNavbar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/images-loaded.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/site.js"></script>
+
+    <!-- Project Data and Loading Script -->
+    <script>
+      // Project data storage
+      const projects = {
+        vibranium: {
+          title: "Vibranium - API Security",
+          subtitle: "Comprehensive API Security Solution",
+          tags: ["Security", "API", "DevOps", "Penetration Testing"],
+          description: [
+            "Developed a comprehensive API security solution with SDK, GitHub action, penetration testing server, and proxy server",
+            "Provides robust security measures for API endpoints with automated security testing through CI/CD pipelines",
+            "Implements real-time threat detection and mitigation capabilities"
+          ],
+          technologies: [
+            "Python",
+            "Node.js",
+            "Docker",
+            "Kubernetes",
+            "GitHub Actions",
+            "REST APIs",
+            "OWASP Security Standards"
+          ],
+          links: [
+            {
+              text: "GitHub",
+              url: "https://github.com/kennethnrk/vibranium",
+              icon: "fa-github"
+            },
+            {
+              text: "Documentation",
+              url: "#",
+              icon: "fa-book"
+            }
+          ],
+          gallery: [
+            "images/gallery-images/gallery-image-1.jpg",
+            "images/gallery-images/gallery-image-2.jpg",
+            "images/gallery-images/gallery-image-3.jpg"
+          ]
+        },
+        rakshak: {
+          title: "Rakshak - CCTV based security solution",
+          subtitle: "AI-Powered Smart CCTV System",
+          tags: ["Machine Learning", "Computer Vision", "Security", "AI/ML"],
+          description: [
+            "Developed an all-in-one smart CCTV solution with 12+ machine learning models for various detection tasks",
+            "Integrated with web and mobile apps for seamless user experience",
+            "Provides real-time object detection, facial recognition, and anomaly detection",
+            "Features automated alert systems for enhanced security monitoring"
+          ],
+          technologies: [
+            "Python",
+            "TensorFlow",
+            "PyTorch",
+            "OpenCV",
+            "React",
+            "Node.js",
+            "Django",
+            "Computer Vision",
+            "Neural Networks"
+          ],
+          links: [
+            {
+              text: "GitHub",
+              url: "https://github.com/kennethnrk/rakshak",
+              icon: "fa-github"
+            },
+            {
+              text: "Demo",
+              url: "#",
+              icon: "fa-external-link"
+            }
+          ],
+          gallery: [
+            "images/gallery-images/gallery-image-4.jpg",
+            "images/gallery-images/gallery-image-5.jpg",
+            "images/gallery-images/gallery-image-6.jpg"
+          ]
+        },
+        outfitai: {
+          title: "OutfitAI - Generative AI for outfits",
+          subtitle: "GenAI-Powered E-commerce Platform",
+          tags: ["AI/ML", "LLMs", "E-commerce", "Frontend", "Backend"],
+          description: [
+            "Built a GenAI-powered e-commerce website with ML-based product recommendations",
+            "Developed a fashion recommendation chatbot that generates AI outfits and suggests similar products",
+            "Leverages large language models for natural language understanding",
+            "Uses generative AI for creating personalized outfit combinations"
+          ],
+          technologies: [
+            "Python",
+            "React",
+            "Node.js",
+            "LLMs",
+            "LangChain",
+            "TensorFlow",
+            "RAG",
+            "Fine-tuning",
+            "REST APIs"
+          ],
+          links: [
+            {
+              text: "GitHub",
+              url: "https://github.com/kennethnrk/outfitai",
+              icon: "fa-github"
+            },
+            {
+              text: "Live Demo",
+              url: "#",
+              icon: "fa-external-link"
+            }
+          ],
+          gallery: [
+            "images/gallery-images/gallery-image-1.jpg",
+            "images/gallery-images/gallery-image-2.jpg",
+            "images/gallery-images/gallery-image-3.jpg",
+            "images/gallery-images/gallery-image-4.jpg"
+          ]
+        },
+        shortenit: {
+          title: "ShortenIt - URL shortener",
+          subtitle: "Web-based URL Shortening Service",
+          tags: ["Backend", "Web Development", "Analytics"],
+          description: [
+            "Implemented a web-based URL shortener using JSP and Perl CGI",
+            "Hashes URLs into unique 8-character strings with CRC32 algorithm",
+            "Features analytics and customizable links with detailed click tracking",
+            "Provides custom link aliases and QR code generation for easy sharing"
+          ],
+          technologies: [
+            "Java",
+            "JSP",
+            "Perl",
+            "CGI",
+            "MySQL",
+            "JavaScript",
+            "HTML/CSS"
+          ],
+          links: [
+            {
+              text: "GitHub",
+              url: "https://github.com/kennethnrk/shortenit",
+              icon: "fa-github"
+            }
+          ],
+          gallery: [
+            "images/gallery-images/gallery-image-5.jpg",
+            "images/gallery-images/gallery-image-6.jpg"
+          ]
+        }
+      };
+
+      // Get URL parameter
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+        var results = regex.exec(location.search);
+        return results === null
+          ? ""
+          : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      // Load project data
+      function loadProject() {
+        var projectId = getUrlParameter("project");
+        var project = projects[projectId];
+
+        if (!project) {
+          // Default to first project if not found
+          project = projects.vibranium;
+        }
+
+        // Set page title
+        document.title = project.title + " - Kenneth Rodrigues";
+
+        // Set project heading
+        document.getElementById("project-title").textContent = project.title;
+        document.getElementById("project-subtitle").textContent =
+          project.subtitle;
+
+        // Set tags
+        var tagsContainer = document.getElementById("project-tags");
+        tagsContainer.innerHTML = "";
+        project.tags.forEach(function (tag) {
+          var tagElement = document.createElement("span");
+          tagElement.className = "tag";
+          tagElement.textContent = tag;
+          tagsContainer.appendChild(tagElement);
+        });
+
+        // Set description (as bullet points)
+        var descContainer = document.getElementById("project-description");
+        descContainer.innerHTML = "";
+        if (Array.isArray(project.description)) {
+          var ul = document.createElement("ul");
+          project.description.forEach(function (point) {
+            var li = document.createElement("li");
+            li.textContent = point;
+            ul.appendChild(li);
+          });
+          descContainer.appendChild(ul);
+        } else {
+          // Fallback for old string format - split by sentences
+          var sentences = project.description.split(/[.!?]+/).filter(function(s) { return s.trim().length > 0; });
+          var ul = document.createElement("ul");
+          sentences.forEach(function (sentence) {
+            var li = document.createElement("li");
+            li.textContent = sentence.trim();
+            ul.appendChild(li);
+          });
+          descContainer.appendChild(ul);
+        }
+
+        // Set technologies
+        var techContainer = document.getElementById("project-technologies");
+        techContainer.innerHTML = "";
+        project.technologies.forEach(function (tech) {
+          var li = document.createElement("li");
+          li.textContent = tech;
+          techContainer.appendChild(li);
+        });
+
+        // Set links
+        var linksContainer = document.getElementById("project-links");
+        linksContainer.innerHTML = "";
+        project.links.forEach(function (link) {
+          var a = document.createElement("a");
+          a.href = link.url;
+          a.target = "_blank";
+          a.innerHTML = '<i class="fa ' + link.icon + '"></i>' + link.text;
+          linksContainer.appendChild(a);
+        });
+
+        // Set gallery (limit to 3 images)
+        var galleryContainer = document.getElementById("project-gallery");
+        galleryContainer.innerHTML = "";
+        var galleryImages = project.gallery.slice(0, 3); // Limit to 3 images
+        galleryImages.forEach(function (image) {
+          var a = document.createElement("a");
+          a.href = image;
+          a.setAttribute("data-featherlight", "image");
+
+          var img = document.createElement("img");
+          img.src = image;
+          img.alt = project.title;
+
+          a.appendChild(img);
+          galleryContainer.appendChild(a);
+        });
+      }
+
+      // Load project when page is ready
+      $(document).ready(function () {
+        loadProject();
+      });
+    </script>
+  </body>
+</html>
