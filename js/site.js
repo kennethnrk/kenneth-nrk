@@ -31,10 +31,23 @@ $(document).ready(function () {
 		}
 	});
 
-	/* Sticky Navigation */
-	if (!!$.prototype.stickyNavbar) {
-		$('#header').stickyNavbar();
-	}
+	/* Simple smooth scroll for anchor links - only if on same page */
+	$('a[href^="#"]').on('click', function(e) {
+		var href = $(this).attr('href');
+		if (href === '#' || href === '#!') return;
+		
+		var targetId = href.substring(1);
+		var targetElement = document.getElementById(targetId);
+		
+		if (targetElement) {
+			// Only do smooth scroll if target exists on current page
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $(targetElement).offset().top - 100
+			}, 750);
+			window.location.hash = href;
+		}
+	});
 
 	$('#content').waypoint(function (direction) {
 		if (direction === 'down') {
