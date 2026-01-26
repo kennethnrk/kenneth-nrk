@@ -35,6 +35,17 @@
       rel="stylesheet"
       type="text/css"
     />
+    <style>
+      .tab-button.active {
+        color: #d2b356 !important;
+        border-left-color: #d2b356 !important;
+        background-color: rgba(210, 179, 86, 0.1) !important;
+      }
+      .tab-button:hover {
+        color: #d2b356 !important;
+        background-color: rgba(210, 179, 86, 0.05) !important;
+      }
+    </style>
   </head>
   <body>
     <!-- Preloader -->
@@ -167,120 +178,455 @@
           <div class="row clearfix">
             <div class="col-3">
               <div class="section-heading">
-                <h3>SUCCESS</h3>
+                <h3>BUILD</h3>
                 <h2 class="section-title">Current and Past Projects</h2>
-                <p class="section-subtitle">
-                  Some of the projects I am currently working on or have worked
-                  on in the past. Includes a wide variety of Machine learning,
-                  AI, Cyber Security, Frontend and Dev-Ops projects.
-                </p>
+              </div>
+              <!-- Project Tabs -->
+              <div class="project-tabs" style="margin-top: 0px;">
+                <button class="tab-button active" data-tab="fullstack" style="display: block; width: 100%; background: none; border: none; padding: 15px 20px; font-size: 16px; font-weight: 600; color: #111; cursor: pointer; border-left: 3px solid transparent; text-align: left; margin-bottom: 10px; transition: all 0.3s;">
+                  Fullstack
+                </button>
+                <button class="tab-button" data-tab="systems" style="display: block; width: 100%; background: none; border: none; padding: 15px 20px; font-size: 16px; font-weight: 600; color: #111; cursor: pointer; border-left: 3px solid transparent; text-align: left; margin-bottom: 10px; transition: all 0.3s;">
+                  Systems
+                </button>
+                <button class="tab-button" data-tab="aiml" style="display: block; width: 100%; background: none; border: none; padding: 15px 20px; font-size: 16px; font-weight: 600; color: #111; cursor: pointer; border-left: 3px solid transparent; text-align: left; margin-bottom: 10px; transition: all 0.3s;">
+                  AI/ML
+                </button>
+                <button class="tab-button" data-tab="opensource" style="display: block; width: 100%; background: none; border: none; padding: 15px 20px; font-size: 16px; font-weight: 600; color: #111; cursor: pointer; border-left: 3px solid transparent; text-align: left; transition: all 0.3s;">
+                  Open Source
+                </button>
               </div>
             </div>
 
             <div class="col-2-3">
-              <!--Icon Block-->
-              <a href="project-details.html?project=vibranium" style="text-decoration: none; color: inherit;">
-                <div
-                  class="col-2 icon-block icon-top wow fadeInUp"
-                  data-wow-delay="0.1s"
-                  style="cursor: pointer; transition: transform 0.3s;"
-                  onmouseover="this.style.transform='translateY(-5px)'"
-                  onmouseout="this.style.transform='translateY(0)'"
-                >
-                  <!--Icon-->
-                  <div class="icon">
-                    <i class="fa fa-shield fa-2x"></i>
-                  </div>
-                  <!--Icon Block Description-->
-                  <div class="icon-block-description">
-                    <h4>Vibranium - API Security</h4>
-                    <p>
-                      This project developed an API security solution including an
-                      SDK, GitHub action, penetration testing server, and proxy
-                      server.
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <!--End of Icon Block-->
 
-              <!--Icon Block-->
-              <a href="project-details.html?project=rakshak" style="text-decoration: none; color: inherit;">
-                <div
-                  class="col-2 icon-block icon-top wow fadeInUp"
-                  data-wow-delay="0.3s"
-                  style="cursor: pointer; transition: transform 0.3s;"
-                  onmouseover="this.style.transform='translateY(-5px)'"
-                  onmouseout="this.style.transform='translateY(0)'"
-                >
-                  <!--Icon-->
-                  <div class="icon">
-                    <i class="fa fa-camera fa-2x"></i>
+              <!-- Fullstack Projects -->
+              <div id="fullstack" class="tab-content" style="display: block;">
+                <!--Icon Block-->
+                <a href="project-details.html?project=shortenit" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.1s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-link fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>ShortenIt - URL shortener</h4>
+                      <p>
+                        Implemented a web-based URL shortener using JSP and Perl
+                        CGI, hashing URLs into unique 8-character strings with
+                        CRC32, featuring analytics and customizable links.
+                      </p>
+                    </div>
                   </div>
-                  <!--Icon Block Description-->
-                  <div class="icon-block-description">
-                    <h4>Rakshak - CCTV based security solution</h4>
-                    <p>
-                      Developed an all-in-one smart CCTV solution with 12+ machine
-                      learning models for various detection tasks, integraed with
-                      web and mobile apps
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <!--End of Icon Block-->
+                </a>
+                <!--End of Icon Block-->
 
-              <!--Icon Block-->
-              <a href="project-details.html?project=outfitai" style="text-decoration: none; color: inherit;">
-                <div
-                  class="col-2 icon-block icon-top wow fadeInUp"
-                  data-wow-delay="0.5s"
-                  style="cursor: pointer; transition: transform 0.3s;"
-                  onmouseover="this.style.transform='translateY(-5px)'"
-                  onmouseout="this.style.transform='translateY(0)'"
-                >
-                  <!--Icon-->
-                  <div class="icon">
-                    <i class="fa fa-shopping-bag fa-2x"></i>
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.2s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-shopping-cart fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>E-Commerce Platform</h4>
+                      <p>
+                        Full-stack e-commerce solution built with React frontend
+                        and Node.js backend, featuring payment integration, user
+                        authentication, and inventory management.
+                      </p>
+                    </div>
                   </div>
-                  <!--Icon Block Description-->
-                  <div class="icon-block-description">
-                    <h4>OutfitAI - Generative AI for oufits</h4>
-                    <p>
-                      Built a GenAI-powered e-commerce website with ML-based
-                      product recommendations and a fashion recommendation chatbot
-                      that generates AI outfits and suggests similar products.
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <!--End of Icon Block-->
+                </a>
+                <!--End of Icon Block-->
 
-              <!--Icon Block-->
-              <a href="project-details.html?project=shortenit" style="text-decoration: none; color: inherit;">
-                <div
-                  class="col-2 icon-block icon-top wow fadeInUp"
-                  data-wow-delay="0.5s"
-                  style="cursor: pointer; transition: transform 0.3s;"
-                  onmouseover="this.style.transform='translateY(-5px)'"
-                  onmouseout="this.style.transform='translateY(0)'"
-                >
-                  <!--Icon-->
-                  <div class="icon">
-                    <i class="fa fa-link fa-2x"></i>
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.3s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-tasks fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Task Management App</h4>
+                      <p>
+                        Collaborative task management application with real-time
+                        updates, built using React, Express, and WebSocket
+                        technology for seamless team collaboration.
+                      </p>
+                    </div>
                   </div>
-                  <!--Icon Block Description-->
-                  <div class="icon-block-description">
-                    <h4>ShortenIt - URL shortener</h4>
-                    <p>
-                      Implemented a web-based URL shortener using JSP and Perl
-                      CGI, hashing URLs into unique 8-character strings with
-                      CRC32, featuring analytics and customizable links.
-                    </p>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.4s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-comments fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Social Media Dashboard</h4>
+                      <p>
+                        Comprehensive social media management dashboard with
+                        analytics, scheduling, and multi-platform integration
+                        built with modern web technologies.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <!--End of Icon Block-->
+                </a>
+                <!--End of Icon Block-->
+              </div>
+
+              <!-- Systems Projects -->
+              <div id="systems" class="tab-content" style="display: none;">
+                <!--Icon Block-->
+                <a href="project-details.html?project=vibranium" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.1s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-shield fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Vibranium - API Security</h4>
+                      <p>
+                        This project developed an API security solution including an
+                        SDK, GitHub action, penetration testing server, and proxy
+                        server.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.2s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-server fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Distributed File System</h4>
+                      <p>
+                        High-performance distributed file system with replication
+                        and fault tolerance, designed for large-scale data storage
+                        and retrieval operations.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.3s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-database fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Database Optimization Engine</h4>
+                      <p>
+                        Advanced database query optimization system with intelligent
+                        indexing and caching mechanisms for improved performance
+                        and reduced latency.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.4s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-network-wired fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Network Monitoring System</h4>
+                      <p>
+                        Real-time network monitoring and analysis tool with packet
+                        inspection, traffic analysis, and automated alerting
+                        capabilities for enterprise networks.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+              </div>
+
+              <!-- AI/ML Projects -->
+              <div id="aiml" class="tab-content" style="display: none;">
+                <!--Icon Block-->
+                <a href="project-details.html?project=rakshak" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.1s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-camera fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Rakshak - CCTV based security solution</h4>
+                      <p>
+                        Developed an all-in-one smart CCTV solution with 12+ machine
+                        learning models for various detection tasks, integraed with
+                        web and mobile apps
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="project-details.html?project=outfitai" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.2s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-shopping-bag fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>OutfitAI - Generative AI for oufits</h4>
+                      <p>
+                        Built a GenAI-powered e-commerce website with ML-based
+                        product recommendations and a fashion recommendation chatbot
+                        that generates AI outfits and suggests similar products.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.3s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-brain fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Sentiment Analysis API</h4>
+                      <p>
+                        Natural language processing API for real-time sentiment
+                        analysis using transformer models, capable of analyzing
+                        text across multiple languages and domains.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.4s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-chart-line fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Predictive Analytics Platform</h4>
+                      <p>
+                        Machine learning platform for predictive analytics with
+                        automated feature engineering, model selection, and
+                        deployment pipelines for business intelligence.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+              </div>
+
+              <!-- Open Source Projects -->
+              <div id="opensource" class="tab-content" style="display: none;">
+                <!--Icon Block-->
+                <a href="project-details.html?project=vibranium" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.1s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-shield fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Vibranium - API Security</h4>
+                      <p>
+                        This project developed an API security solution including an
+                        SDK, GitHub action, penetration testing server, and proxy
+                        server.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.2s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-server fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Distributed File System</h4>
+                      <p>
+                        High-performance distributed file system with replication
+                        and fault tolerance, designed for large-scale data storage
+                        and retrieval operations.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.3s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-database fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Database Optimization Engine</h4>
+                      <p>
+                        Advanced database query optimization system with intelligent
+                        indexing and caching mechanisms for improved performance
+                        and reduced latency.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+
+                <!--Icon Block-->
+                <a href="#" style="text-decoration: none; color: inherit;">
+                  <div
+                    class="col-2 icon-block icon-top wow fadeInUp"
+                    data-wow-delay="0.4s"
+                    style="cursor: pointer; transition: transform 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'"
+                  >
+                    <!--Icon-->
+                    <div class="icon">
+                      <i class="fa fa-network-wired fa-2x"></i>
+                    </div>
+                    <!--Icon Block Description-->
+                    <div class="icon-block-description">
+                      <h4>Network Monitoring System</h4>
+                      <p>
+                        Real-time network monitoring and analysis tool with packet
+                        inspection, traffic analysis, and automated alerting
+                        capabilities for enterprise networks.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <!--End of Icon Block-->
+              </div>
             </div>
           </div>
         </section>
@@ -291,7 +637,7 @@
           <div class="row clearfix">
             <div class="col-3">
               <div class="section-heading">
-                <h3>TECH</h3>
+                <h3>LEARN</h3>
                 <h2 class="section-title">Skills and Interests</h2>
                 <p class="" style="line-height: 2; font-size: 1.1em;">
                   <strong style="color: #2c3e50; font-size: 1.2em; text-transform: uppercase; letter-spacing: 1px;">Languages:</strong><br>

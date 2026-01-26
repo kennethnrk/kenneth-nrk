@@ -38,7 +38,7 @@
     <style>
       /* Project Details Page Styles */
       .project-heading {
-        padding: 20px 0 20px;
+        padding: 80px 0 20px;
         text-align: center;
         background: #f9f9f9;
       }
@@ -179,30 +179,18 @@
           flex: 1;
         }
       }
-      .back-to-home {
-        position: relative;
-        display: inline-block;
-        margin: 20px 0 20px 20px;
-        padding: 10px 16px;
-        background: transparent;
-        color: #2c3e50;
-        text-decoration: none;
-        border-radius: 2px;
-        transition: opacity 0.3s;
-        font-size: 16px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        opacity: 0.85;
+      /* Back button styling in header */
+      #logo a {
+        transition: all 0.3s;
       }
-      .back-to-home:hover {
-        opacity: 1;
-        color: #1a252f;
+      #logo a:hover {
+        color: #d2b356 !important;
       }
-      .back-to-home i {
-        font-size: 16px;
+      #logo a:hover i {
+        color: #d2b356 !important;
       }
-      #banner {
+      /* Banner content hidden, but header visible */
+      #banner-content {
         display: none;
       }
     </style>
@@ -238,11 +226,80 @@
     </div>
 
     <div id="wrapper">
-      <!--Back to Home Button-->
-      <a href="index.html" class="back-to-home">
-        <i class="fa fa-arrow-left"></i>
-        <span>Back to Home</span>
-      </a>
+      <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+          <div class="row clearfix">
+            <div class="col-1">
+              <!--Logo-->
+              <div id="logo">
+                <!--Logo that is shown on the banner-->
+                <img
+                  src="images/logo.png"
+                  id="banner-logo"
+                  alt="Landing Page"
+                />
+                <!--End of Banner Logo-->
+
+                <!--The Logo that is shown on the sticky Navigation Bar-->
+                <img
+                  src="images/logo-2.png"
+                  id="navigation-logo"
+                  alt="Landing Page"
+                />
+                <!--End of Navigation Logo-->
+              </div>
+              <!--End of Logo-->
+
+              <aside>
+                <!--Social Icons in Header-->
+                <ul class="social-icons">
+                  <li>
+                    <a
+                      target="_blank"
+                      title="linkedin"
+                      href="https://www.linkedin.com/in/kenneth-rodrigues"
+                    >
+                      <i class="fa fa-linkedin fa-1x"></i><span>LinkedIn</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      title="Github"
+                      href="http://www.Github.com/kennethnrk"
+                    >
+                      <i class="fa fa-github fa-1x"></i><span>Github</span>
+                    </a>
+                  </li>
+                </ul>
+              </aside>
+
+              <!--Main Navigation-->
+              <nav id="nav-main">
+                <ul>
+                  <li>
+                    <a href="index.html#banner">Home</a>
+                  </li>
+                  <li>
+                    <a href="index.html#about">Projects</a>
+                  </li>
+                  <li>
+                    <a href="index.html#interests">Interests</a>
+                  </li>
+                  <li>
+                    <a href="index.html#gallery">Gallery</a>
+                  </li>
+                </ul>
+              </nav>
+              <!--End of Main Navigation-->
+
+              <div id="nav-trigger"><span></span></div>
+              <nav id="nav-mobile"></nav>
+            </div>
+          </div>
+        </div>
+        <!--End of Header-->
+      </header>
 
       <!--Main Content Area-->
       <main id="content">

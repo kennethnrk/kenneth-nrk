@@ -48,6 +48,28 @@ $(document).ready(function () {
 			window.location.hash = href;
 		}
 	});
+	
+	/* Handle page load with hash - scroll to top first, then to target */
+	if (window.location.hash) {
+		var hash = window.location.hash;
+		var targetId = hash.substring(1);
+		var targetElement = document.getElementById(targetId);
+		
+		if (targetElement) {
+			// Scroll to top first, then to target after page loads
+			$(window).on('load', function() {
+				$('html, body').animate({
+					scrollTop: 0
+				}, 300, function() {
+					setTimeout(function() {
+						$('html, body').animate({
+							scrollTop: $(targetElement).offset().top - 100
+						}, 750);
+					}, 100);
+				});
+			});
+		}
+	}
 
 	$('#content').waypoint(function (direction) {
 		if (direction === 'down') {
@@ -56,6 +78,37 @@ $(document).ready(function () {
 		else {
 			$('#header').removeClass('nav-solid fadeInDown');
 		}
+	});
+
+	/* Project Tabs */
+	// Function to show tab content and ensure visibility
+	function showTabContent(targetTab) {
+		var $targetContent = $('#' + targetTab);
+		$targetContent.show();
+		
+		// Force visibility of all elements in the active tab
+		// WOW.js sets visibility: hidden initially, so we override it
+		$targetContent.find('.wow').css({
+			'visibility': 'visible',
+			'opacity': '1'
+		});
+	}
+	
+	// Ensure initial tab content is visible
+	showTabContent('fullstack');
+	
+	$('.tab-button').on('click', function() {
+		var targetTab = $(this).data('tab');
+		
+		// Remove active class from all buttons
+		$('.tab-button').removeClass('active');
+		// Add active class to clicked button
+		$(this).addClass('active');
+		
+		// Hide all tab contents
+		$('.tab-content').hide();
+		// Show selected tab content
+		showTabContent(targetTab);
 	});
 
 });
