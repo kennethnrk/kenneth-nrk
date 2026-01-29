@@ -472,5 +472,36 @@ const projects = {
       "images/project-images/mad-ads/2.jpg",
       "images/project-images/mad-ads/3.jpg",
     ]
+  },
+  edgernetes: {
+    title: "Edgernetes - Edge AI Orchestrator",
+    subtitle: "Distributed AI orchestration platform for heterogeneous edge devices",
+    tags: ["Go", "Edge Computing", "Distributed Systems", "gRPC", "Kubernetes", "AI/ML"],
+    description: [
+      "Distributed AI orchestration platform designed for edge computing: deploys and manages AI models across heterogeneous devices (different CPUs, GPUs, NPUs) with varying compute and network conditions.",
+      "Control-plane/agent architecture: central orchestrator manages cluster state and schedules deployments; edge agents register capabilities and run inference (ONNX Runtime planned).",
+      "Intelligent model scheduling: heavier models on high-compute nodes, lighter models on resource-constrained devices; multi-model orchestration similar to NVIDIA Triton.",
+      "Low-latency control plane: gRPC and Protocol Buffers for efficient control-plane-to-agent communication; embedded WAL-based persistent store (no external database).",
+      "Built for edge constraints: resource-limited, geographically dispersed nodes; inspired by Qualcomm Edge AI Hackathon.",
+    ],
+    technologies: [
+      "Go",
+      "gRPC",
+      "Protocol Buffers",
+      "ONNX Runtime",
+      "Distributed Systems",
+      "Edge Computing",
+      "Embedded WAL Store",
+    ],
+    links: [
+      {
+        text: "GitHub",
+        url: "https://github.com/kennethnrk/Edgernetes-AI",
+        icon: "fa-github"
+      }
+    ],
+    gallery: [
+      "images/project-images/edgernetes/62Genericedgeai.png",
+    ]
   }
 };
